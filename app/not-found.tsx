@@ -1,0 +1,2 @@
+import Link from "next/link";
+export default function NotFound(){return <main style={{minHeight:"100vh",display:"grid",placeItems:"center",padding:24,background:"#6537d3",color:"white"}}><div><p style={{fontSize:18}}>404 | cette page n'a pas encore pris forme.</p><h1 style={{fontSize:"clamp(4rem,15vw,10rem)",lineHeight:1,margin:"24px 0"}}>OUPS</h1><Link href="/" style={{color:"#ffcb00",textDecoration:"underline"}}>Retour à l'accueil</Link></div></main>}
