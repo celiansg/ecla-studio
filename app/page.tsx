@@ -23,9 +23,9 @@ const steps = [
 
 const teamMembers = [
   { firstName: "Eytan", surname: "FONTAINE", role: "Chef de production graphique", initials: "EF", icon: PenTool, description: "Donne forme aux idées graphiques et veille à la cohérence des supports." },
-  { firstName: "Célian", surname: "SEGUIN GOSSELIN", role: "Responsable client", initials: "CSG", icon: MessageCircle, description: "Suit les échanges, clarifie les besoins et accompagne chaque projet." },
+  { firstName: "Célian", surname: "SEGUIN GOSSELIN", role: "Référent client", initials: "CSG", icon: MessageCircle, description: "Suit les échanges, clarifie les besoins et accompagne chaque projet." },
   { firstName: "Lucas", surname: "TIXIER", role: "Chef de production", initials: "LT", icon: Printer, description: "Organise la fabrication et garantit le suivi de production." },
-  { firstName: "Alex", surname: "ERROU", role: "Chef de qualité", initials: "AE", icon: Layers3, description: "Contrôle les détails et veille à la qualité finale des livrables." },
+  { firstName: "Alex", surname: "ERROU", role: "Responsable qualité", initials: "AE", icon: Layers3, description: "Contrôle les détails et veille à la qualité finale des livrables." },
 ];
 
 function SectionLabel({ children }: { children: React.ReactNode }) {
