@@ -1592,3 +1592,16 @@ html{color-scheme:only light}
   .trust-reference-image-main{grid-row:auto;min-height:280px}
   .trust-reference-image{min-height:190px}
 }
+
+/* Services card rhythm: keep the icon and title clearly separated. */
+.services-showcase .service-showcase-card-icon{
+  margin-bottom:24px;
+}
+.services-showcase .service-showcase-card-content h3{
+  margin-top:0;
+  margin-bottom:16px;
+}
+@media(max-width:700px){
+  .services-showcase .service-showcase-card-icon{margin-bottom:20px}
+  .services-showcase .service-showcase-card-content h3{margin-bottom:13px}
+}
