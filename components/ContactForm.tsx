@@ -25,7 +25,7 @@ export function ContactForm() {
     <label>Votre projet<select name="service" required defaultValue=""><option value="" disabled>Choisir une prestation</option><option>Identité visuelle</option><option>Création graphique</option><option>Impression & supports</option><option>Projet sur mesure</option></select></label>
     <label>Parlez-nous de votre idée<textarea name="message" rows={4} required minLength={10} maxLength={3000} placeholder="Ce que vous imaginez, vos envies, vos délais…" /></label>
     <div className="honeypot" aria-hidden="true"><label>Site internet<input name="website" tabIndex={-1} autoComplete="off" /></label></div>
-    <div className="form-footer"><p>En envoyant ce formulaire, vous acceptez que vos informations soient utilisées uniquement pour répondre à votre demande. Voir notre <a href="/confidentialite">politique de confidentialité</a>.</p><button className="button-primary" type="submit" disabled={status === "loading"}>{status === "loading" ? <LoaderCircle className="spinner" /> : <>Envoyer ma demande <ArrowUpRight size={18} /></>}</button></div>
+    <div className="form-footer"><p>En envoyant ce formulaire, vous acceptez que vos informations soient utilisées uniquement pour répondre à votre demande. Voir notre <a href="/confidentialite">politique de confidentialité</a>.</p><button className="button-primary" type="submit" disabled={status === "loading"}>{status === "loading" ? <LoaderCircle aria-hidden="true" className="spinner" /> : <>Envoyer ma demande <ArrowUpRight aria-hidden="true" size={18} /></>}</button></div>
     <div role="status" aria-live="polite" className={status === "error" ? "form-response form-error" : "form-response"}>{message}</div>
   </form>;
 }

@@ -71,6 +71,6 @@ export function Header() {
     <nav id="main-navigation" aria-label="Navigation principale" className={open ? "nav-links nav-open" : "nav-links"}>
       {links.map(({ id, href, label }) => <Link key={href} className={activeId === id ? "is-active" : undefined} aria-current={activeId === id ? "location" : undefined} href={href} onClick={() => handleNavClick(id)}>{label}</Link>)}
     </nav>
-    <button className="menu-button" aria-controls="main-navigation" aria-expanded={open} aria-label={open ? "Fermer le menu" : "Ouvrir le menu"} onClick={() => setOpen(!open)}>{open ? <X /> : <Menu />}</button>
+    <button className="menu-button" aria-controls="main-navigation" aria-expanded={open} aria-label={open ? "Fermer le menu" : "Ouvrir le menu"} onClick={() => setOpen(!open)}>{open ? <X aria-hidden="true" /> : <Menu aria-hidden="true" />}</button>
   </header>;
 }
