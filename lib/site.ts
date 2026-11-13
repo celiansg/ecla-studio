@@ -2,9 +2,9 @@ export const site = {
   name: "ECLA",
   tagline: "Studio graphique & impression",
   url: process.env.NEXT_PUBLIC_SITE_URL || "http://localhost:3000",
-  email: "", // TODO : adresse professionnelle à renseigner
+  email: "ecla.laf@gmail.com",
   telephone: "", // TODO
-  address: "", // TODO
+  address: "21 Bd Robert Schuman, 63000 Clermont-Ferrand",
   social: { instagram: "", behance: "", linkedin: "" },
 };
 
