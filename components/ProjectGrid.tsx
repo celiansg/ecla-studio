@@ -1,8 +1,6 @@
 "use client";
 
-import Link from "next/link";
 import Image from "next/image";
-import { MoveUpRight } from "lucide-react";
 import type { Project } from "@/lib/site";
 
 function ProjectVisual({ project }: { project: Project }) {
@@ -21,8 +19,8 @@ export function ProjectGrid({ projects }: { projects: Project[] }) {
   return <>
     <div className="project-grid" aria-live="polite">
       {projects.map((project, index) => <article className={`project-card project-${project.illustration} ${index === 0 ? "project-card-featured" : ""}`} key={project.id}>
-        <div className="project-visual">{project.image ? <Image className="project-image" src={project.image} alt={`${project.title}, ${project.category}`} fill sizes="(max-width: 700px) 100vw, 34vw"/> : <ProjectVisual project={project}/>}<div className="project-top"><span>Réalisation ECLA</span><span>↗</span></div></div>
-        <div className="project-meta"><div><span>{project.category}</span><h3>{project.title}</h3><p>{project.description}</p></div><Link href="#contact" className="project-arrow" aria-label={`Parler du projet ${project.title}`}><MoveUpRight size={22}/></Link></div>
+        <div className="project-visual">{project.image ? <Image className="project-image" src={project.image} alt={`${project.title}, ${project.category}`} fill sizes="(max-width: 700px) 100vw, 34vw"/> : <ProjectVisual project={project}/>}</div>
+        <div className="project-meta"><div><span>{project.category}</span><h3>{project.title}</h3><p>{project.description}</p></div></div>
       </article>)}
     </div>
   </>;
