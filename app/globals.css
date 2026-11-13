@@ -863,7 +863,9 @@ body{font-family:"Montserrat",Arial,sans-serif}
   transition:color .35s ease,transform .35s ease;
 }
 .step-reference:not(.is-active) .step-reference-icon{background:transparent;color:#4620a8}
+.step-reference-4 .step-reference-icon{width:auto;height:62px;border-radius:0;background:transparent;color:#4620a8}
 .step-reference.is-active .step-reference-icon{color:var(--yellow);transform:translateY(-2px)}
+.step-reference-4.is-active .step-reference-icon{background:transparent;color:var(--yellow)}
 .step-reference-copy>span{display:none}
 .step-reference h3{
   margin:0 0 17px;

@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight, Menu, X } from "lucide-react";
+import { Menu, X } from "lucide-react";
 
 const links = [
   { id: "accueil", href: "/#accueil", label: "Accueil" },
@@ -70,7 +70,6 @@ export function Header() {
     </Link>
     <nav id="main-navigation" aria-label="Navigation principale" className={open ? "nav-links nav-open" : "nav-links"}>
       {links.map(({ id, href, label }) => <Link key={href} className={activeId === id ? "is-active" : undefined} aria-current={activeId === id ? "location" : undefined} href={href} onClick={() => handleNavClick(id)}>{label}</Link>)}
-      <Link href="/#contact" className="header-cta" onClick={() => setOpen(false)}>Demander un devis <ArrowUpRight size={17} /></Link>
     </nav>
     <button className="menu-button" aria-controls="main-navigation" aria-expanded={open} aria-label={open ? "Fermer le menu" : "Ouvrir le menu"} onClick={() => setOpen(!open)}>{open ? <X /> : <Menu />}</button>
   </header>;
