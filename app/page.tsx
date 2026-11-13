@@ -36,10 +36,10 @@ export default function Home() {
     <ScrollReveal />
     <a className="page-skip" href="#main-content">Aller au contenu</a>
     <div className="site-shell">
+      <Header />
       <section className="hero hero-image-reference" id="accueil">
         <div className="hero-image-reference-bg" aria-hidden="true"><Image src="/assets/ecla-hero-client.png" alt="" fill priority sizes="100vw" /></div>
         <div className="hero-image-reference-overlay" aria-hidden="true" />
-        <Header />
         <div className="hero-image-reference-content container">
           <div className="hero-image-reference-copy">
             <p className="hero-image-reference-kicker"><span aria-hidden="true" />Studio graphique &amp; impression</p>
