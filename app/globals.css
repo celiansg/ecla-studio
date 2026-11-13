@@ -1461,3 +1461,6 @@ html,body{overflow-x:hidden}
   html{scroll-behavior:auto}
   [data-reveal]{opacity:1;transform:none;transition:none}
 }
+
+/* ECLA keeps its light brand palette regardless of the device theme. */
+html{color-scheme:only light}
