@@ -48,7 +48,6 @@ export default function Home() {
             <div className="hero-reference-actions"><Link className="button-yellow" href="#services">Nos services <ArrowDown size={17}/></Link><Link className="button-outline" href="#projets">Nos réalisations <ArrowUpRight size={17}/></Link></div>
           </div>
         </div>
-        <div className="hero-image-reference-scroll" aria-hidden="true"><span /><ArrowDown size={20}/></div>
       </section>
 
       <main id="main-content">
