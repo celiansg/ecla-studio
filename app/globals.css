@@ -832,8 +832,9 @@ body{font-family:"Montserrat",Arial,sans-serif}
   color:#fff;
   font-size:25px;
   font-weight:900;
+  transition:background-color .35s ease,color .35s ease,transform .35s ease;
 }
-.method-reference-progress-step-4 span{background:var(--yellow);color:#24104f}
+.method-reference-progress-step.is-active span{background:var(--yellow);color:#24104f;transform:scale(1.06)}
 .steps-reference{
   display:grid;
   grid-template-columns:repeat(4,1fr);
@@ -903,15 +904,18 @@ body{font-family:"Montserrat",Arial,sans-serif}
   }
   .method-reference-progress:before{left:8px;right:8px}
   .method-reference-progress-step span{width:52px;height:52px;font-size:18px}
-  .steps-reference{grid-template-columns:1fr;gap:0}
+  .steps-reference{display:flex;grid-template-columns:none;gap:0;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x mandatory;scrollbar-width:thin;padding-bottom:18px;margin-right:-18px}
   .step-reference,
   .step-reference:not(:first-child){
+    flex:0 0 min(78vw,360px);
     min-height:0;
-    padding:30px 0 32px;
-    border-right:0;
-    border-bottom:1px solid #d8d1e3;
+    padding:30px 28px 32px 0;
+    margin-right:28px;
+    border-right:1px solid #d8d1e3;
+    border-bottom:0;
+    scroll-snap-align:start;
   }
-  .step-reference:last-child{border-bottom:0}
+  .step-reference:last-child{border-right:0;margin-right:0}
   .step-reference-icon{height:54px;margin-bottom:20px}
   .step-reference h3{font-size:31px}
   .step-reference p{max-width:430px;font-size:16px}
