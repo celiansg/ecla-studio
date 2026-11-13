@@ -17,6 +17,11 @@ export function Header() {
   const [activeId, setActiveId] = useState("accueil");
 
   useEffect(() => {
+    const setActiveFromHash = () => {
+      const hashId = window.location.hash.replace(/^#/, "");
+      if (links.some(({ id }) => id === hashId)) setActiveId(hashId);
+    };
+
     const sections = links
       .map(({ id }) => document.getElementById(id))
       .filter((section): section is HTMLElement => Boolean(section));
@@ -32,8 +37,19 @@ export function Header() {
     );
 
     sections.forEach((section) => observer.observe(section));
-    return () => observer.disconnect();
+    setActiveFromHash();
+    window.addEventListener("hashchange", setActiveFromHash);
+
+    return () => {
+      observer.disconnect();
+      window.removeEventListener("hashchange", setActiveFromHash);
+    };
   }, []);
+
+  const handleNavClick = (id: string) => {
+    setActiveId(id);
+    setOpen(false);
+  };
 
   useEffect(() => {
     document.body.classList.toggle("menu-is-open", open);
@@ -53,7 +69,7 @@ export function Header() {
       <Image alt="ECLA Studio graphique & impression" src="/assets/ecla-logo-transparent.png" width={155} height={70} priority />
     </Link>
     <nav id="main-navigation" aria-label="Navigation principale" className={open ? "nav-links nav-open" : "nav-links"}>
-      {links.map(({ id, href, label }) => <Link key={href} className={activeId === id ? "is-active" : undefined} aria-current={activeId === id ? "page" : undefined} href={href} onClick={() => setOpen(false)}>{label}</Link>)}
+      {links.map(({ id, href, label }) => <Link key={href} className={activeId === id ? "is-active" : undefined} aria-current={activeId === id ? "location" : undefined} href={href} onClick={() => handleNavClick(id)}>{label}</Link>)}
       <Link href="/#contact" className="header-cta" onClick={() => setOpen(false)}>Demander un devis <ArrowUpRight size={17} /></Link>
     </nav>
     <button className="menu-button" aria-controls="main-navigation" aria-expanded={open} aria-label={open ? "Fermer le menu" : "Ouvrir le menu"} onClick={() => setOpen(!open)}>{open ? <X /> : <Menu />}</button>
