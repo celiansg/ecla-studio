@@ -38,7 +38,7 @@
 .contact-form-panel{border:1px solid #17151c1a}
 .contact-form input:focus,.contact-form select:focus,.contact-form textarea:focus{border-color:var(--purple);box-shadow:0 0 0 3px #6537d333;outline:none}
 .button-primary{transition:transform .2s ease,box-shadow .2s ease}.button-primary:hover:not(:disabled){transform:translateY(-2px);box-shadow:0 7px 0 #17151c}
-.form-response:empty{display:none}
+.form-response:empty{display:none}.form-response:focus{outline:3px solid var(--yellow);outline-offset:4px;border-radius:4px}.form-response a{text-decoration:underline;font-weight:800}.contact-form[aria-busy="true"] .button-primary{cursor:wait}
 .site-footer a{transition:color .2s ease}.site-footer a:hover{color:var(--yellow)}
 body.menu-is-open{overflow:hidden}
 @keyframes hero-in{from{opacity:0;transform:translateY(22px)}to{opacity:1;transform:translateY(0)}}

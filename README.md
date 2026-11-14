@@ -28,7 +28,8 @@ Puis ouvrir `http://localhost:3000`. Les commandes de contrôle sont `npm run li
 - [ ] Confirmer les quatre expertises et les modalités réelles d'impression.
 - [ ] Renseigner l'e-mail, le téléphone, l'adresse, les réseaux sociaux et `NEXT_PUBLIC_SITE_URL`.
 - [ ] Compléter et faire valider `app/mentions-legales/page.tsx` et `app/confidentialite/page.tsx`.
-- [ ] Ajouter les variables Resend dans `.env.local` puis dans Vercel : `RESEND_API_KEY`, `CONTACT_TO_EMAIL`, `CONTACT_FROM_EMAIL`.
+- [ ] Ajouter les variables Resend dans `.env.local` puis dans Vercel : `RESEND_API_KEY`, `CONTACT_TO_EMAIL` (par défaut `ecla.laf@gmail.com`) et `CONTACT_FROM_EMAIL`.
+- [ ] Utiliser une adresse `CONTACT_FROM_EMAIL` appartenant à un domaine vérifié dans Resend ; ne jamais mettre la clé API dans le code ou dans Git.
 - [ ] Vérifier le domaine expéditeur Resend et tester l'envoi avant mise en ligne.
 - [ ] Ajouter un contrôle anti-spam/rate limiting durable si le formulaire devient public.
 - [ ] Faire une revue finale des licences, de l'accessibilité et des navigateurs ciblés.
