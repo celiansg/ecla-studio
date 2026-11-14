@@ -1593,6 +1593,51 @@ html{color-scheme:only light}
   .trust-reference-image{min-height:190px}
 }
 
+/* Final brand pass: use the exact purple sampled from the official ECLA logo. */
+:root{--ecla-brand-purple:#6537D3;--purple-deep:#6537D3}
+.hero-image-reference,.hero-reference{background:var(--ecla-brand-purple) !important}
+.hero-image-reference-overlay{
+  background:linear-gradient(90deg,#6537d3f2 0%,#6537d3d9 29%,#6537d36b 52%,#6537d31c 78%,transparent 100%),linear-gradient(180deg,#6537d34d 0%,transparent 35%,#6537d32b 100%) !important;
+}
+.hero-reference-visual:after{background:radial-gradient(circle at 70% 35%,#6537d37a,transparent 30%),linear-gradient(135deg,transparent 35%,#6537d366 36%,transparent 60%)}
+.site-header.site-header-fixed{background:rgb(101 55 211 / .94)}
+.site-header-fixed .nav-links{background:var(--ecla-brand-purple)}
+
+.services-showcase{color:var(--ecla-brand-purple)}
+.services-showcase .service-showcase-heading .section-label,
+.services-showcase .service-showcase-heading h2,
+.services-showcase .service-showcase-cta{color:var(--ecla-brand-purple)}
+.services-showcase .service-showcase-card{background:var(--ecla-brand-purple)}
+.services-showcase .service-showcase-card-icon{background:#6537D3}
+.services-showcase .service-showcase-cta{border-color:var(--ecla-brand-purple)}
+.services-showcase .service-showcase-cta:hover{background:var(--ecla-brand-purple)}
+
+.method-reference-heading .section-label,
+.team-reference-heading .section-label,
+.trust-reference .section-label{color:var(--ecla-brand-purple)}
+.method-reference-heading h2 span,
+.team-reference-heading h2 span,
+.trust-reference-values strong{color:var(--ecla-brand-purple)}
+.method-reference-heading>p{border-left-color:var(--ecla-brand-purple)}
+.method-reference-progress:before,
+.method-reference-progress-step span{background:var(--ecla-brand-purple)}
+.step-reference-icon,.step-reference:not(.is-active) .step-reference-icon{color:var(--ecla-brand-purple)}
+.team-reference-heading>p{border-left-color:var(--ecla-brand-purple)}
+.team-member-portrait{color:var(--ecla-brand-purple)}
+.team-reference .team-member-card h3,
+.team-member-description svg,
+.team-values svg{color:var(--ecla-brand-purple)}
+
+.contact-reference{background:var(--ecla-brand-purple)}
+.contact-reference .button-primary{background:var(--ecla-brand-purple)}
+.contact-reference-cta:hover{color:var(--ecla-brand-purple)}
+@media(max-width:850px){
+  .method-reference-heading>p,.team-reference-heading>p{border-top-color:var(--ecla-brand-purple)}
+}
+@media(max-width:700px){
+  .hero-image-reference-overlay{background:linear-gradient(180deg,#6537d3f2 0%,#6537d3d9 36%,#6537d360 66%,#6537d333 100%) !important}
+}
+
 /* Services card rhythm: keep the icon and title clearly separated. */
 .services-showcase .service-showcase-card-icon{
   margin-bottom:24px;
