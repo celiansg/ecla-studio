@@ -1650,3 +1650,58 @@ html{color-scheme:only light}
   .services-showcase .service-showcase-card-icon{margin-bottom:20px}
   .services-showcase .service-showcase-card-content h3{margin-bottom:13px}
 }
+
+/* Reference palette: deep ink purple for typography, bright ECLA purple for accents. */
+:root{
+  --purple:#6537D3;
+  --purple-deep:#211048;
+  --dark:#171021;
+  --ink:#211048;
+  --ecla-brand-purple:#6537D3;
+  --ecla-deep-purple:#211048;
+  --ecla-black-purple:#171021;
+}
+body{color:var(--ecla-deep-purple)}
+
+/* Amboy's accents rise above the glyph box; give each display line enough air. */
+.hero-image-reference-copy h1,
+.hero-reference-copy h1,
+.service-showcase-heading h2,
+.projects-reference-copy h2,
+.method-reference-heading h2,
+.team-reference-heading h2,
+.trust-reference-copy h2{
+  line-height:.95;
+  padding-top:.06em;
+}
+.service-showcase-card-content h3,
+.step-reference h3{line-height:1.02}
+
+/* Match the supplied references: #211048 / #24104F + ECLA #6537D3. */
+.services-showcase{color:var(--ecla-deep-purple)}
+.services-showcase .service-showcase-heading .section-label,
+.projects-reference-copy .section-label,
+.method-reference-heading .section-label,
+.team-reference-heading .section-label,
+.trust-reference-copy .section-label{color:var(--ecla-brand-purple)}
+.services-showcase .service-showcase-heading h2{color:var(--ecla-deep-purple)}
+.services-showcase .service-showcase-heading h2 span{color:var(--yellow)}
+.services-showcase .service-showcase-card{background:var(--ecla-brand-purple)}
+.services-showcase .service-showcase-card-icon{background:var(--ecla-deep-purple)}
+
+.projects-reference-copy h2{color:#24104F}
+.method-reference-heading h2{color:var(--ecla-black-purple)}
+.method-reference-heading h2 span,
+.team-reference-heading h2 span,
+.trust-reference-copy h2 span{color:var(--ecla-brand-purple)}
+.team-reference-heading h2{color:var(--ecla-deep-purple)}
+.trust-reference-copy h2{color:var(--ecla-deep-purple)}
+.team-reference .team-member-card h3{color:var(--ecla-deep-purple)}
+
+/* Keep highlighted words from pulling the next line into the accent. */
+.method-reference-heading h2 span,
+.team-reference-heading h2 span,
+.trust-reference-copy h2 span{
+  padding-top:.08em;
+  padding-bottom:.06em;
+}
