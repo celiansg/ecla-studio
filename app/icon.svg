@@ -1,4 +1,6 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="790 60 500 500" role="img" aria-labelledby="title">
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-labelledby="title">
   <title id="title">ECLA</title>
-  <image href="/assets/ecla-logo-original.png" x="0" y="0" width="1336" height="708" preserveAspectRatio="none"/>
+  <rect width="64" height="64" rx="14" fill="#6537D3"/>
+  <path fill="#FFCB00" d="M31 5c-2.1 0-3.8 1.4-4.5 3.3L21 25H6.2c-4.4 0-6 5.7-2.2 8.2l11.8 7.6-4.1 16.8c-1.1 4.5 4.1 7.8 7.8 5l12.5-9.7 12.5 9.7c3.7 2.8 8.9-.5 7.8-5l-4.1-16.8 11.8-7.6c3.8-2.5 2.2-8.2-2.2-8.2H43L37.5 8.3C36.8 6.4 35.1 5 33 5h-2Z"/>
+  <path fill="#6537D3" d="m32 17 2.9 9.5 4.4 2.9-5.4 3.5-.9 8.7-.9-8.7-5.4-3.5 4.4-2.9L32 17Z"/>
 </svg>

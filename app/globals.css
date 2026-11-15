@@ -1865,3 +1865,59 @@ body{color:var(--ecla-deep-purple)}
   .intro-loader-label{animation:none;opacity:1;transform:none}
   .intro-loader.is-leaving{animation:intro-loader-out .12s ease forwards}
 }
+
+/* Product captions: make each realization explicit without bringing back the old badges. */
+.projects-reference .project-card{
+  min-width:0;
+}
+.projects-reference .project-meta{
+  position:static;
+  width:auto;
+  height:auto;
+  overflow:visible;
+  clip-path:none;
+  white-space:normal;
+  display:block;
+  padding:18px 4px 4px;
+  color:var(--ecla-deep-purple);
+}
+.projects-reference .project-meta>div{display:block}
+.projects-reference .project-meta span{
+  display:inline-flex;
+  align-items:center;
+  gap:9px;
+  color:var(--ecla-brand-purple);
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.08em;
+}
+.projects-reference .project-meta span:before{
+  content:"";
+  width:26px;
+  height:3px;
+  border-radius:99px;
+  background:var(--yellow);
+}
+.projects-reference .project-meta h3{
+  margin:9px 0 7px;
+  color:var(--ecla-deep-purple);
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:clamp(18px,2vw,25px);
+  font-weight:800;
+  line-height:1.14;
+  letter-spacing:-.035em;
+}
+.projects-reference .project-meta p{
+  max-width:360px;
+  margin:0;
+  color:#625584;
+  font-family:"Montserrat",Arial,sans-serif;
+  font-size:12px;
+  line-height:1.45;
+}
+@media(max-width:700px){
+  .projects-reference .project-meta{padding:16px 2px 2px}
+  .projects-reference .project-meta h3{font-size:21px}
+  .projects-reference .project-meta p{font-size:12px}
+}
