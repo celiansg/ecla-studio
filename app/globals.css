@@ -1705,3 +1705,53 @@ body{color:var(--ecla-deep-purple)}
   padding-top:.08em;
   padding-bottom:.06em;
 }
+
+/* ECLA yellow text labels: square corners, with only the top-right corner rounded. */
+.hero-capsule,
+.highlight,
+.manifesto mark,
+.services-reference-copy h2 span,
+.projects-reference-copy h2 span,
+.method-reference h2 span,
+.about-reference-copy h2 span,
+.trust-reference h2 span,
+.contact-reference-copy h2 span,
+.method-reference-heading h2 span,
+.team-reference-heading h2 span,
+.trust-reference-copy h2 span,
+.contact-reference-copy h2 span,
+.team-reference .team-member-role{
+  border-radius:0 14px 0 0;
+  transform:none;
+}
+
+.hero-capsule,
+.highlight,
+.manifesto mark,
+.services-reference-copy h2 span,
+.projects-reference-copy h2 span,
+.method-reference h2 span,
+.about-reference-copy h2 span,
+.trust-reference h2 span,
+.contact-reference-copy h2 span{
+  display:inline-block;
+}
+
+@media(max-width:700px){
+  .hero-capsule,
+  .highlight,
+  .manifesto mark,
+  .services-reference-copy h2 span,
+  .projects-reference-copy h2 span,
+  .method-reference h2 span,
+  .about-reference-copy h2 span,
+  .trust-reference h2 span,
+  .contact-reference-copy h2 span,
+  .method-reference-heading h2 span,
+  .team-reference-heading h2 span,
+  .trust-reference-copy h2 span,
+  .contact-reference-copy h2 span,
+  .team-reference .team-member-role{
+    border-radius:0 10px 0 0;
+  }
+}
